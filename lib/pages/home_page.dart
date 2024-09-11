@@ -1,12 +1,30 @@
+import 'package:car_rental_app/models/car.dart';
+import 'package:car_rental_app/widgets/car_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final List<Car> carList = [
+    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: ListView.builder(
+        itemCount: carList.length,
+        itemBuilder: (context, index) {
+          return CarCard(
+            car: carList[index],
+          );
+        },
+      ),
     );
   }
 }
