@@ -36,7 +36,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Choose Your Car'),
+        centerTitle: true,
+      ),
       body: ListView.builder(
         itemCount: carList.length,
         itemBuilder: (context, index) {
