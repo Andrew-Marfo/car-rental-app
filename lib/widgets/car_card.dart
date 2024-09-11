@@ -10,8 +10,33 @@ class CarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [Text(car.model)],
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        children: [
+          Image.asset('assets/car_image.png'),
+          Text(car.model),
+          const SizedBox(height: 20),
+          Row(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Image.asset('assets/gps.png'),
+                  Text('${car.distance.toStringAsFixed(0)}.km'),
+                ],
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/pump.png'),
+                  Text('${car.fuelCapacity.toStringAsFixed(0)}L'),
+                ],
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

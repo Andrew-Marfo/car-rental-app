@@ -6,11 +6,31 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final List<Car> carList = [
-    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
-    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
-    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
-    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
-    Car(model: 'Fortuner GR', distance: 56, fuelCapacity: 120, pricePerHour: 2),
+    Car(
+        model: 'Fortuner GR',
+        distance: 870,
+        fuelCapacity: 50,
+        pricePerHour: 80),
+    Car(
+        model: 'Fortuner GR',
+        distance: 870,
+        fuelCapacity: 50,
+        pricePerHour: 80),
+    Car(
+        model: 'Fortuner GR',
+        distance: 870,
+        fuelCapacity: 50,
+        pricePerHour: 80),
+    Car(
+        model: 'Fortuner GR',
+        distance: 870,
+        fuelCapacity: 50,
+        pricePerHour: 80),
+    Car(
+        model: 'Fortuner GR',
+        distance: 870,
+        fuelCapacity: 50,
+        pricePerHour: 80),
   ];
 
   @override
