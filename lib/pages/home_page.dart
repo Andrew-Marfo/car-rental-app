@@ -1,4 +1,5 @@
 import 'package:car_rental_app/models/car.dart';
+import 'package:car_rental_app/pages/car_details_page.dart';
 import 'package:car_rental_app/widgets/car_card.dart';
 import 'package:flutter/material.dart';
 
@@ -43,8 +44,22 @@ class HomePage extends StatelessWidget {
       body: ListView.builder(
         itemCount: carList.length,
         itemBuilder: (context, index) {
-          return CarCard(
-            car: carList[index],
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return CarDetailsPage(
+                      car: carList[index],
+                    );
+                  },
+                ),
+              );
+            },
+            child: CarCard(
+              car: carList[index],
+            ),
           );
         },
       ),
