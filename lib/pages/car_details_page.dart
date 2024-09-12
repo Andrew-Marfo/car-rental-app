@@ -78,7 +78,7 @@ class CarDetailsPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
                           'assets/maps.png',
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       ),
                     ),
